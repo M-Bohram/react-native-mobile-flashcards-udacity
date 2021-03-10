@@ -23,7 +23,7 @@ To run this project locally, clone this repository and run the following command
 
 ## Tech Stack
 
-This is a [React Native](https://facebook.github.io/react-native/) app and as such the project was started using [`create-react-native-app`](https://github.com/react-community/create-react-native-app). The code base is rather straight forward and a standard React component model is used. [Redux](https://redux.js.org/) is used for state management and [React Native AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage) is used for persistence. The data structure used relies on a random unique ID being generated for each deck, and the data for each deck being stored accordingly:
+This is a [React Native](https://facebook.github.io/react-native/) app and as such the project was started using [`create-react-native-app`](https://github.com/react-community/create-react-native-app). The code base is rather straight forward and a standard React component model is used. [React Native AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage) is used for persistence. The data structure used relies on a random unique ID being generated for each deck, and the data for each deck being stored accordingly:
 
 ```javascript
 random_id_string: {
@@ -54,3 +54,7 @@ This application could certainly be enhanced (such as enabling deletion support 
 | :------- | :----------------- | :-------------------------------------------------------------- |
 | iOS      | :x:                | Not yet tested on iOS                                           |
 | Android  | :white_check_mark: | @M-Bohram tested it on Android real device "Android version 11" |
+
+#### Note
+
+This README.md is inspired by [irishbryan](https://github.com/irishbryan/)
