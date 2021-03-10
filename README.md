@@ -1,44 +1,56 @@
-# My Universal React Project
+# Udacity React Nanodegree Project: Mobile Flashcards
 
-<p>
-  <!-- iOS -->
-  <a href="https://itunes.apple.com/app/apple-store/id982107779">
-    <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  </a>
-  <!-- Android -->
-  <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample">
-    <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  </a>
-  <!-- Web -->
-  <a href="https://docs.expo.io/workflow/web/">
-    <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-  </a>
-</p>
+This is the third project from the Udacity React Nanodegree and focuses on building a "Mobile Flashcards" app using [React Native](https://facebook.github.io/react-native/).
 
-## 🚀 How to use
+| Contents                            |
+| :---------------------------------- |
+| [App Experience](#app-experience)   |
+| [Getting Started](#getting-started) |
+| [Tech Stack](#tech-stack)           |
+| [Platforms](#platforms)             |
 
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
-- Run `yarn start` to start the bundler.
-- Open the project in a React runtime to try it:
-  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
-  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
-  - Web: Any web browser
+## App Experience
 
-## Adding Native Code
+The application allows a user to create a deck of flash cards, each capturing a question and answer for the deck's topic. The user can then start a quiz to test their knowledge of a particular topic.
 
-This project can be run from a web browser or the Expo client app. You may find that you want to add more native code later on. You can do this by ejecting the project and rebuilding it yourself.
+## Getting Started
 
-- Run `yarn eject` to create the native projects.
-- You can still run your project in the web browser or Expo client, you just won't be able to access any new native modules you add.
+To run this project locally, clone this repository and run the following commands:
 
-## Publishing
+- `npm install`
+- `npm start`
+  - Since this project is `React Native` and iOS and/or Android Simulator will need to be configured on the computer.
 
-- Deploy the native app to the App store and Play store using this guide: [Deployment](https://docs.expo.io/distribution/app-stores/).
-- Deploy the website using this guide: [Web deployment](https://docs.expo.io/distribution/publishing-websites/).
+## Tech Stack
 
-## 📝 Notes
+This is a [React Native](https://facebook.github.io/react-native/) app and as such the project was started using [`create-react-native-app`](https://github.com/react-community/create-react-native-app). The code base is rather straight forward and a standard React component model is used. [Redux](https://redux.js.org/) is used for state management and [React Native AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage) is used for persistence. The data structure used relies on a random unique ID being generated for each deck, and the data for each deck being stored accordingly:
 
-- Learn more about [Universal React](https://docs.expo.io/).
-- See what API and components are [available in the React runtimes](https://docs.expo.io/versions/latest/).
-- Find out more about developing apps and websites: [Guides](https://docs.expo.io/guides/).
+```javascript
+random_id_string: {
+  id: random_id_string,
+  title: name_of_deck,
+  cards: [
+    {question , answer},
+    {question , answer},
+    {question , answer}
+  ]
+},
+random_id_string: {
+  id: random_id_string,
+  name: name_of_deck,
+  cards: [
+    {question , answer},
+    {question , answer},
+    {question , answer}
+  ]
+}
+```
+
+This application could certainly be enhanced (such as enabling deletion support for decks and cards), but as of right now it delivers on the requirements for the Udacity React Nanodegree.
+
+## Platforms
+
+| Platform | Tested             | Notes                                                           |
+| :------- | :----------------- | :-------------------------------------------------------------- |
+| iOS      | :x:                | Not yet tested on iOS                                           |
+| Android  | :white_check_mark: | @M-Bohram tested it on Android real device "Android version 11" |
